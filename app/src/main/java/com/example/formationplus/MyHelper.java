@@ -2,8 +2,10 @@ package com.example.formationplus;
 
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.util.ArrayList;
 
@@ -25,6 +27,10 @@ public class MyHelper extends SQLiteOpenHelper {
         db.execSQL(sql);
         db.execSQL(sql1);
         db.execSQL(sql2);
+        String sql3 =  "Select * from Etudiant";
+        db.execSQL(sql3);
+        Cursor res=db.rawQuery(sql3,null);
+        Log.d("",""+res);
 
         // String sql_ ="CREATE TABLE CONVENTION(idConvention INTEGER ,nom TEXT, nbheure INTEGER)";
     }

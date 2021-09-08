@@ -3,10 +3,19 @@ package com.example.formationplus;
 public class Convention {
     int idConvention;
     String nom;
+    int nbHeur;
+    public Convention(){
 
+    }
+   public Convention(int idConvention,String nom,int nbHeur){
+        this.idConvention=idConvention;
+        this.nom=nom;
+        this.nbHeur=nbHeur;
+   }
     public int getIdConvention() {
         return idConvention;
     }
+
 
     public void setIdConvention(int idConvention) {
         this.idConvention = idConvention;
@@ -28,5 +37,5 @@ public class Convention {
         this.nbHeur = nbHeur;
     }
 
-    int nbHeur;
+
 }
